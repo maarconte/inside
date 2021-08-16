@@ -1,7 +1,7 @@
 .section-text-image {
     padding: 0 !important;
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
         .row {
             flex-direction: row-reverse;
         }

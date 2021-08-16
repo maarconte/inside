@@ -36,8 +36,13 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-    // used as wrapper for sticky footer
+html body {
+    font-family: $text-ff;
+    font-size: $text-fz;
+    line-height: $text-lh;
+    color: $text-c;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     display: flex;
     flex-direction: column;
     align-items: center;
