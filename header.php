@@ -27,7 +27,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
   <a class="navbar-brand" href="<?php echo site_url(); ?>">
-    <div class="logo" style="background-image: url('<? if($image[0]): echo $image[0]; else: echo get_template_directory_uri()?>/assets/images/stanlee_logo_texte.png<?endif; ?>')"></div>
+    <div class="logo" style="background-image: url('<?php if($image[0]): echo $image[0]; else: echo get_template_directory_uri()?>/assets/images/stanlee_logo_texte.png<?php endif; ?>')"></div>
   </a>
     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
         <span class="navbar-toggler-icon"></span>
@@ -53,6 +53,19 @@
 <?php if ( is_home()): ?>
             <header>
                 <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+            </header>
+<?php endif; ?>
+<?php if ( is_front_page()): ?>
+            <header class="page-header page-header_front-page">
+              <img class="page-header_logo" src="<?php if($image[0]){ echo $image[0];}?>" alt="<?php echo get_bloginfo('name')?>">
+
+                <img class="clip-svg" src="//localhost:3000/wp-content/uploads/2021/08/MicrosoftTeams-image.jpg" alt="<?php echo get_bloginfo('name')?>">
+
+                <svg width="0" height="0">
+                  <clipPath id="svgClip" clipPathUnits="objectBoundingBox" class="svg-clip">
+                    <path d="M16.91,0,.23,313c-4.36,82,53.12,152.94,130,160.5l713,70.12c84.11,8.27,156.7-62.1,156.7-151.88V0Z"></path>
+                  </clipPath>
+                </svg>
             </header>
 <?php endif; ?>
 <? if (is_archive() || is_category()): ?>

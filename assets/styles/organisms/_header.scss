@@ -9,3 +9,34 @@
 header {
     margin-top: $header_height;
 }
+
+.page-header {
+    height: 500px;
+    display: grid;
+    place-items: center;
+
+    &_front-page {}
+
+    &_logo {
+        width: 500px;
+    }
+
+    .svg-clip {
+        transform: scale(0.001, 0.00185);
+    }
+
+    .clip-svg {
+        width: 95%;
+        height: 565px;
+        object-fit: cover;
+        clip-path: url(#svgClip);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: -1;
+        filter: brightness(0.4);
+    }
+}
