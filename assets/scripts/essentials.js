@@ -55,3 +55,12 @@ $('.slider_3').slick({
   slidesToShow: 3,
   slidesToScroll: 3
 });
+
+
+// Menu background color
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".navbar-light");
+    $nav.toggleClass('bg-white',$(this).scrollTop() > $nav.height());
+  });
+});

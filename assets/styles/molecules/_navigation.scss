@@ -15,6 +15,7 @@ nav.navbar {
     z-index: 200;
     width: 100vw;
     height: $header_height;
+    transition: all 1s;
 
     .logo  {
         width: 12rem;
