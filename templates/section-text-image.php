@@ -12,6 +12,8 @@
  ?>
 
   <section class="section section-text-image">
+
+  <div class="container">
     <div class="row">
     <div class="col-sm-6 section-text-image__text">
         <div class="section-text-image__text__inner">
@@ -28,7 +30,18 @@
         </div>
     </div>
     <div class="col-sm-6 section-text-image__image">
-        <div class="bg" style="background-image: url(<?php if(get_sub_field('image') ) : $img = get_sub_field('image'); echo $img['url']; endif;?>)"></div>
+
+        <?php if ( get_sub_field('image') ) : $img = get_sub_field('image'); ?>
+          <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+        <?php endif; ?>
+        <svg width="0" height="0">
+	<clipPath id="svgImage" clipPathUnits="objectBoundingBox" transform="scale(0.0015, 0.0012)">
+		<path d="M517.16,731.1l-414.68,62A89.29,89.29,0,0,1,0,704.75V89.29A89.28,89.28,0,0,1,97.51.39l443.7,41a89.28,89.28,0,0,1,80.92,93.95l-29,512.46A89.29,89.29,0,0,1,517.16,731.1Z"></path>
+	</clipPath>
+</svg>
+
     </div>
     </div>
+
+  </div>
  </section>

@@ -71,6 +71,7 @@
       </div>
       </div>
     </div>
+
     </footer>
     <? wp_footer() ?>
   </body>

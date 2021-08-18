@@ -23,8 +23,8 @@
 }
 
 html {
+    min-height: 100%;
     max-width: 100vw;
-    height: 100%;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -37,6 +37,7 @@ html {
 }
 
 html body {
+    position: relative;
     font-family: $text-ff;
     font-size: $text-fz;
     line-height: $text-lh;
@@ -46,13 +47,16 @@ html body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    height: 150vh;
+    margin: 0;
     background-color: $html__bgcolor !important;
 }
 
 body.home {
-    background: rgb(155, 206, 243);
+    background-color: rgb(155, 206, 243) !important;
     background: linear-gradient(180deg, rgba(155, 206, 243, 1) 0%, rgba(60, 155, 211, 1) 50%, rgba(66, 111, 180, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 main {

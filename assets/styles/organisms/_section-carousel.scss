@@ -4,9 +4,10 @@
     }
 
 
-    .carousel-item {
-        img {
-            width: 100%;
-        }
+    img {
+        border-radius: 20px;
+        margin-right: 30px;
+        height: 300px;
+        object-fit: cover;
     }
 }
