@@ -32,7 +32,9 @@
     <div class="col-sm-6 section-text-image__image">
 
         <?php if ( get_sub_field('image') ) : $img = get_sub_field('image'); ?>
+        <div class="img-wrapper">
           <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+        </div>
         <?php endif; ?>
         <svg width="0" height="0">
 	<clipPath id="svgImage" clipPathUnits="objectBoundingBox" transform="scale(0.0015, 0.0012)">

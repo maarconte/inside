@@ -52,13 +52,6 @@ html body {
     background-color: $html__bgcolor !important;
 }
 
-body.home {
-    background-color: rgb(155, 206, 243) !important;
-    background: linear-gradient(180deg, rgba(155, 206, 243, 1) 0%, rgba(60, 155, 211, 1) 50%, rgba(66, 111, 180, 1) 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 main {
     position: relative;
     margin-top: $header_height;
