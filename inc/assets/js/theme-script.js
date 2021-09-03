@@ -26,7 +26,7 @@ jQuery( function ( $ ) {
 
     // Adding Class to contact form 7 form
     $('.wpcf7-form-control').not(".wpcf7-submit, .wpcf7-acceptance, .wpcf7-file, .wpcf7-radio").addClass('form-control');
-    $('.wpcf7-submit').addClass('btn btn-primary');
+    $('.wpcf7-submit').addClass('btn btn-secondary');
 
     // Adding Class to Woocommerce form
     $('.woocommerce-Input--text, .woocommerce-Input--email, .woocommerce-Input--password').addClass('form-control');

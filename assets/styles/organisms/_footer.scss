@@ -10,7 +10,7 @@
     width: 100vw;
     margin-top: auto;
     color: $color-grey;
-    background: $color-dark;
+    background: $color-secondary;
 
     &__rs {
         text-align: center;
@@ -33,7 +33,7 @@
     }
 
     &__credits {
-        background-color: $color-black;
+        background-color: $color-secondary;
         color: $color-grey2;
         text-align: center;
 

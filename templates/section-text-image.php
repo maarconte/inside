@@ -15,7 +15,7 @@
 
   <div class="container">
     <div class="row">
-    <div class="col-sm-6 section-text-image__text">
+    <div class="col-sm-6 section-text-image__text animate__animated animate__slideInLeft animate__delay-2s ">
         <div class="section-text-image__text__inner">
             <!-- Title -->
             <?php if(get_sub_field('title') ) : ?>
@@ -29,7 +29,7 @@
            <!-- Text -->
         </div>
     </div>
-    <div class="col-sm-6 section-text-image__image">
+    <div class="col-sm-6 section-text-image__image animate__animated animate__slideInRight animate__delay-2s">
 
         <?php if ( get_sub_field('image') ) : $img = get_sub_field('image'); ?>
         <div class="img-wrapper">

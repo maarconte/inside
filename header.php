@@ -61,8 +61,8 @@
             <header class="page-header page-header_front-page">
               <img class="page-header_logo" src="<?php if($image[0]){ echo $image[0];}?>" alt="<?php echo get_bloginfo('name')?>">
 
-                <img class="clip-svg" src="//localhost:3000/wp-content/uploads/2021/08/MicrosoftTeams-image.jpg" alt="<?php echo get_bloginfo('name')?>">
-
+                <!-- <img class="clip-svg" src="//localhost:3000/wp-content/uploads/2021/08/MicrosoftTeams-image.jpg" alt="<?php // echo get_bloginfo('name')?>"> -->
+<div class="site-header clip-svg"></div>
                 <svg width="0" height="0">
                   <clipPath id="svgClip" clipPathUnits="objectBoundingBox" class="svg-clip">
                     <path d="M16.91,0,.23,313c-4.36,82,53.12,152.94,130,160.5l713,70.12c84.11,8.27,156.7-62.1,156.7-151.88V0Z"></path>
