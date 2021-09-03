@@ -1,27 +1,48 @@
 .section-testimonials {
+    background-color: rgba($color-primary-light, 0.45);
+
     @include breakpoint(mobile) {
         padding: 3rem 0 !important;
     }
 
 
     &__carousel {
-        text-align: center;
-
         @include breakpoint(mobile) {
             min-height: 500px;
         }
 
 
-        &_item {
-            &-image {
-                @extend .mb-3, .rounded-circle;
+        .carousel-inner {
+            position: relative;
+            padding: 80px;
 
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                height: 150px;
-                width: 150px;
-                background-color: #ccc;
+            &:before {
+                content: "“";
+                font-size: 8rem;
+                font-family: $text-ff;
+                font-weight: bold;
+                position: absolute;
+                left: 0;
+                top: -50px;
+                color: $color-secondary;
+            }
+
+            &:after {
+                content: "”";
+                font-size: 8rem;
+                font-family: $text-ff;
+                font-weight: bold;
+                position: absolute;
+                right: 0;
+                bottom: -50px;
+                color: $color-secondary;
+            }
+        }
+
+        &_item {
+            p {
+                font-style: italic;
+                font-size: 1.5rem;
             }
         }
 

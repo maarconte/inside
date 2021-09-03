@@ -11,17 +11,7 @@
  */
  ?>
 
-  <section class="section section-testimonials
-  <? if(get_sub_field('fond') == "Couleur"):?> bg-primary
-  <? elseif(get_sub_field('fond') == "Gris"):?> bg-light<? endif;?>">
-    <!-- Section background: image -->
-      <? if(get_sub_field('fond') == "Image"):?>
-      <div class="section__background-image"  style="
-            <? if(get_sub_field('image')):?>
-            background-image:url(<? echo the_sub_field('image') ?>);
-            <? endif;?>"></div>
-      <? endif;?>
-    <!-- Section background: image -->
+  <section class="section section-testimonials">
         <div class="container">
               <?php
               $args = array(
@@ -29,22 +19,17 @@
               );
                $the_query = new WP_Query($args);
               if ($the_query->have_posts() ): $i = 0; $y = 0; ?>
-                    <div id="carouselTestimonials" class="section-testimonials__carousel carousel slide" data-ride="carousel">
-                        <!-- Title -->
+
+                    <!-- Title -->
                         <?php if(get_sub_field('title') ) : ?>
-                              <h2 class="section__title text-center"><?php echo get_sub_field('title'); ?></h2>
+                              <h2 class="section__title mb-5"><?php echo get_sub_field('title'); ?></h2>
                         <?php endif; ?>
                         <!-- Title -->
+                    <div id="carouselTestimonials" class="section-testimonials__carousel carousel slide" data-ride="carousel">
+
                           <div class="carousel-inner">
                                 <?php  while ( $the_query->have_posts() ): $the_query->the_post(); ?>
                                 <div class="carousel-item section-testimonials__carousel_item <?php if($y == 0) {echo 'active';} ?>">
-                                    <!-- Image -->
-                                    <?php if (get_the_post_thumbnail()) : ?>
-                                          <img src="<?php the_post_thumbnail_url('thumbnail')?>" alt="" class="section-testimonials__carousel_item-image">
-                                    <? else : ?>
-                                          <div class="section-testimonials__carousel_item-image"></div>
-                                    <? endif;?>
-                                    <!-- Image -->
                                       <!-- Job -->
                                       <?php if (get_field('quote') ) : ?>
                                             <p> <?php echo get_field('quote'); ?></p>

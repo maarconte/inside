@@ -1587,9 +1587,7 @@
                                         "£": "£",
                                         "¥": "¥"
                                     },
-                                    "default_value": [
-                                        "€"
-                                    ],
+                                    "default_value": "€",
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "ui": 0,
@@ -2113,9 +2111,7 @@
                                         "-": "-",
                                         "%": "%"
                                     },
-                                    "default_value": [
-                                        "Aucun"
-                                    ],
+                                    "default_value": "Aucun",
                                     "multiple": 0,
                                     "ui": 0,
                                     "return_format": "value",
@@ -2256,6 +2252,71 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_61322bd501285": {
+                    "key": "layout_61322bd501285",
+                    "name": "news_letter",
+                    "label": "News letter",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_61322be401286",
+                            "label": "Titre",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_61322bef01287",
+                            "label": "Texte",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_61322c0d01288",
+                            "label": "Formulaire",
+                            "name": "formulaire",
+                            "type": "cf7",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "disable": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Ajouter une section",
@@ -2287,7 +2348,7 @@
         "author",
         "categories"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1585825740
+    "modified": 1630678057
 }

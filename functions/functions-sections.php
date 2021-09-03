@@ -48,6 +48,7 @@ function stanlee_sections() {
       if (get_row_layout() == 'contact') : stanlee_section_contact(); endif;
       if (get_row_layout() == 'stats') : stanlee_section_stats(); endif;
       if (get_row_layout() == 'faq') : stanlee_section_faq(); endif;
+      if (get_row_layout() == 'news_letter') : stanlee_section_newsletter(); endif;
     endwhile;
   endif;
   return ob_get_flush();
@@ -167,6 +168,13 @@ function stanlee_section_stats() {
 function stanlee_section_faq() {
   ob_start('sanitize_output');
     include (get_template_directory().'/templates/section-faq.php');
+  return ob_get_flush();
+}
+/* Newsletter
+/––––––––––––––––––––––––*/
+function stanlee_section_newsletter() {
+  ob_start('sanitize_output');
+    include (get_template_directory().'/templates/section-newsletter.php');
   return ob_get_flush();
 }
 
