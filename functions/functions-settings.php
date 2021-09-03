@@ -61,7 +61,7 @@ function inside_enqueue() {
   wp_enqueue_style('inside_/styles', get_template_directory_uri() . inside_get_cachebusted_css(), false, null);
   wp_enqueue_style('slick/styles', get_template_directory_uri() . '/inc/assets/slick/slick.css', false, null);
   wp_enqueue_style('slick-theme/styles', get_template_directory_uri() . '/inc/assets/slick/slick-theme.css', false, null);
-  /*     wp_enqueue_style( 'custom-admin', get_stylesheet_directory_uri() . '/admin_style.min.css' ); */
+    wp_enqueue_style( 'custom-admin', get_stylesheet_directory_uri() . '/admin_style.min.css' );
   // Typekit
   global $typekit_id;
   if ($typekit_id) :
@@ -84,17 +84,18 @@ add_action('wp_enqueue_scripts', 'inside_enqueue');
 function my_custom_admin_stylesheet() {
     wp_enqueue_style( 'custom-admin', get_stylesheet_directory_uri() . '/admin_style.min.css' );
 }
-
+// TODO : Separate Admin and Login css in gulp
 //This loads the function above on the login page
 add_action( 'admin_enqueue_scripts', 'my_custom_admin_stylesheet' );
+add_action( 'login_enqueue_scripts', 'my_custom_admin_stylesheet' );
 
 // Login Style
-function my_custom_login_stylesheet() {
+/* function my_custom_login_stylesheet() {
     wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/login_style.min.css' );
-}
+} */
 
 //This loads the function above on the login page
-add_action( 'login_enqueue_scripts', 'my_custom_login_stylesheet' );
+/*add_action( 'login_enqueue_scripts', 'my_custom_login_stylesheet' ); */
 
 /* 1.2 THEME SUPPORT
 /––––––––––––––––––––––––*/
