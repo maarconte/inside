@@ -32,11 +32,11 @@
                                 <div class="carousel-item section-testimonials__carousel_item <?php if($y == 0) {echo 'active';} ?>">
                                       <!-- Job -->
                                       <?php if (get_field('quote') ) : ?>
-                                            <p> <?php echo get_field('quote'); ?></p>
+                                            <p class="quote"> <?php echo get_field('quote'); ?></p>
                                       <?php endif; ?>
                                       <!-- Job -->
                                       <!-- Auteur -->
-                                            <h5><?php the_title()?></h5>
+                                            <p class="author"><?php the_title()?></p>
                                       <!-- Auteur -->
                                 </div>
                                 <? $y++ ; endwhile;?>
@@ -55,5 +55,11 @@
                           </a>
                     </div>
                 <? endif; wp_reset_query(); ?>
+
+
+                  <?php $link = get_sub_field( 'link' ); ?>
+			<?php if ( $link ) : ?>
+				<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>" class="btn btn-custom"><?php echo esc_html( $link['title'] ); ?></a>
+			<?php endif; ?>
         </div>
  </section>

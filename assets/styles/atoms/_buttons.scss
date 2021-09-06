@@ -47,3 +47,20 @@ button, .btn {
    
     }
 }
+
+.btn.btn-custom {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-image: url("./assets/images/btn-custom.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 89px;
+    width: 200px;
+    padding: 20px;
+
+    &:hover {
+        filter: brightness(150%);
+    }
+}

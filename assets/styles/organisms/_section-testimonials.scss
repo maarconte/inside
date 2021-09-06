@@ -40,9 +40,14 @@
         }
 
         &_item {
-            p {
+            .quote {
                 font-style: italic;
                 font-size: 1.5rem;
+            }
+
+            .author {
+                color: $color-secondary;
+                font-weight: 600;
             }
         }
 
@@ -57,5 +62,11 @@
                 display: none;
             }
         }
+    }
+
+    .btn-custom {
+        position: absolute;
+        bottom: -100px;
+        right: 30%;
     }
 }
