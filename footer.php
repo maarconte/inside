@@ -12,62 +12,26 @@
        <? if(is_active_sidebar('footer-1')){
       dynamic_sidebar('footer-1');
         } ?>
-        <?php if (have_rows('rs', 'options')) : ?>
-        <div class="col-sm-3">
-      <ul class="footer__rs">
-        <?php while ( have_rows('rs', 'options') ) : the_row(); ?>
-          <?php if (get_sub_field('facebook') ) : ?>
-              <li class="footer__rs__item">
-                <a href="<?php the_sub_field('facebook');?>">
-                  <i class="fab fa-facebook" aria-hidden="true"></i>
-                </a>
-              </li>
-            <?php endif; ?>
-          <?php if (get_sub_field('twitter') ) : ?>
-              <li>
-                <a href="<?php the_sub_field('twitter');?>">
-                  <i class="fab fa-twitter" aria-hidden="true"></i>
-                </a>
-              </li>
-            <?php endif; ?>
-          <?php if (get_sub_field('instagram') ) : ?>
-              <li>
-                <a href="<?php the_sub_field('instagram');?>">
-                  <i class="fab fa-instagram" aria-hidden="true"></i>
-                </a>
-              </li>
-            <?php endif; ?>
-          <?php if (get_sub_field('google') ) : ?>
-              <li>
-                <a href="<?php the_sub_field('google');?>">
-                  <i class="fab fa-google" aria-hidden="true"></i>
-                </a>
-              </li>
-            <?php endif; ?>
-          <?php if (get_sub_field('linkedin') ) : ?>
-              <li>
-                <a href="<?php the_sub_field('linkedin');?>">
-                  <i class="fab fa-linkedin" aria-hidden="true"></i>
-                </a>
-              </li>
-            <?php endif; ?>
-          <?php if (get_sub_field('youtube') ) : ?>
-              <li>
-                <a href="<?php the_sub_field('youtube');?>">
-                  <i class="fab fa-youtube" aria-hidden="true"></i>
-                </a>
-              </li>
-            <?php endif; ?>
-        <? endwhile;?>
-      </ul>
-        </div>
-    <? endif;?>
         </div>
       </div>
     <div class="footer__credits">
       <div class="container">
       <div class="footer__inner">
-      Un site crée par <a href="https://_a.fr" target="_blank" rel="noopener noreferrer"><strong>_a</strong></a>
+        <img src="<?php echo get_option('logo_secondary','') ?>" alt="Logo inside">
+<div class="d-flex align-items-center justify-content-center">
+      © 2021 Inside by everience. Tous droits réservés.
+  <?php
+        wp_nav_menu( array(
+            'theme_location' => 'submenu', // Defined when registering the menu
+            'menu_id'        => 'menu-sub',
+            'container'      => false,
+            'depth'          => 2,
+            'menu_class'     => 'footer-menu',
+            'walker'         => new Bootstrap_NavWalker(), // This controls the display of the Bootstrap Navbar
+            'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
+        ) );
+        ?>
+</div>
       </div>
       </div>
     </div>

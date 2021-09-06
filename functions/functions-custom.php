@@ -33,4 +33,25 @@ if(function_exists('acf_add_options_page') ) {
     acf_add_options_page();
 }
 
+function inside_customize_register( $wp_customize ) {
+     $wp_customize->add_setting('logo_secondary', array(
+        'default'           => '',
+        'capability'        => 'edit_theme_options',
+        'type'           => 'option',
+
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'logo_secondary', array(
+        'label'    => __('Logo secondaire', 'inside'),
+        'section'  => 'title_tagline',
+        'settings' => 'logo_secondary',
+        'priority' => 8
+    )));
+
+
+}
+add_action( 'customize_register', 'inside_customize_register' );
+
+
+
 
