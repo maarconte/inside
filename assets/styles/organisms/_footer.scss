@@ -23,7 +23,11 @@
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 30px;
-            align-items: center;
+
+            @include breakpoint(mobile) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
 
             .blocks-gallery-item {
                 width: inherit;

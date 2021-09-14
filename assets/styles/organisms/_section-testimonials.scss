@@ -8,35 +8,38 @@
 
 
     &__carousel {
-        @include breakpoint(mobile) {
-            min-height: 500px;
-        }
-
-
         .carousel-inner {
             position: relative;
             padding: 80px;
 
-            &:before {
-                content: "“";
+            @include breakpoint(mobile) {
+                padding: 40px;
+            }
+
+
+            &:before, &:after {
                 font-size: 8rem;
                 font-family: $text-ff;
                 font-weight: bold;
                 position: absolute;
+                color: $color-secondary;
+
+                @include breakpoint(mobile) {
+                    font-size: 6rem;
+                    line-height: 1.9;
+                }
+            }
+
+            &:before {
+                content: "“";
                 left: 0;
                 top: -50px;
-                color: $color-secondary;
             }
 
             &:after {
                 content: "”";
-                font-size: 8rem;
-                font-family: $text-ff;
-                font-weight: bold;
-                position: absolute;
                 right: 0;
                 bottom: -50px;
-                color: $color-secondary;
             }
         }
 
@@ -69,5 +72,11 @@
         position: absolute;
         bottom: -100px;
         right: 30%;
+
+        @include breakpoint(mobile) {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
     }
 }

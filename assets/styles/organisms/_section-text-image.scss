@@ -17,6 +17,10 @@
 
         &__inner {
             padding: 30px 0 30px 200px;
+
+            @include breakpoint(mobile) {
+                padding: 15px;
+            }
         }
     }
 
@@ -35,6 +39,10 @@
                 display: block;
                 margin: 0 auto;
                 transition: all 1s;
+
+                @include breakpoint(mobile) {
+                    transform: scale(0.7);
+                }
             }
 
             &:hover {
@@ -59,6 +67,12 @@
                 left: 80px;
                 top: 30px;
                 clip-path: url("#svgImage");
+
+                @include breakpoint(mobile) {
+                    transform: scale(0.7);
+                    left: 20px;
+                    top: 30px;
+                }
             }
         }
     }

@@ -16,11 +16,20 @@ header {
     place-items: center;
     margin-bottom: 200px;
 
+    @include breakpoint(mobile) {
+        margin-bottom: 30px;
+    }
+
+
     &_front-page {}
 
     &_logo {
         width: 500px;
         z-index: 111;
+
+        @include breakpoint(mobile) {
+            width: 300px;
+        }
     }
 
     .svg-clip {
@@ -40,5 +49,9 @@ header {
         margin-right: auto;
         z-index: -1;
         filter: brightness(0.5);
+
+        @include breakpoint(mobile) {
+            height: 300px;
+        }
     }
 }

@@ -4,11 +4,22 @@
     }
 
 
+    .container {
+        @include breakpoint(mobile) {
+            width: 90%;
+        }
+    }
+
     img {
         border-radius: 20px;
         margin-right: 30px;
         height: 300px;
         object-fit: cover;
+
+        @include breakpoint(mobile) {
+            height: 200px;
+            margin-right: 0;
+        }
     }
 
     .slick-prev:before, .slick-next:before {
