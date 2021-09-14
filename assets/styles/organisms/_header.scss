@@ -6,20 +6,22 @@
  *
  */
 
-header {
-    margin-top: $header_height;
-}
-
 .page-header {
-    height: 500px;
+    grid-template-rows: 565px;
     display: grid;
     place-items: center;
-    margin-bottom: 200px;
 
     @include breakpoint(mobile) {
-        margin-bottom: 30px;
+        padding: 0 20px;
+        grid-template-rows: 300px;
     }
 
+
+    .page-title {
+        z-index: 2;
+        color: #fff;
+        text-align: center;
+    }
 
     &_front-page {}
 
