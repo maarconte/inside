@@ -51,6 +51,7 @@ function stanlee_sections() {
       if (get_row_layout() == 'news_letter') : stanlee_section_newsletter(); endif;
       if (get_row_layout() == 'list') : stanlee_section_list(); endif;
       if (get_row_layout() == 'bandeau') : stanlee_section_bandeau(); endif;
+      if (get_row_layout() == 'products') : stanlee_section_products(); endif;
     endwhile;
   endif;
   return ob_get_flush();
@@ -191,6 +192,13 @@ function stanlee_section_list() {
 function stanlee_section_bandeau() {
   ob_start('sanitize_output');
     include (get_template_directory().'/templates/section-bandeau.php');
+  return ob_get_flush();
+}
+/* bandeau
+/––––––––––––––––––––––––*/
+function stanlee_section_products() {
+  ob_start('sanitize_output');
+    include (get_template_directory().'/templates/section-products.php');
   return ob_get_flush();
 }
 

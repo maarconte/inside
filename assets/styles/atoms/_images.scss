@@ -8,3 +8,51 @@
 img {
     //
 }
+
+.img-wrapper {
+    position: relative;
+
+    img {
+        width: 416px;
+        height: 550px;
+        clip-path: url("#svgImage");
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+        transition: all 1s;
+
+        @include breakpoint(mobile) {
+            transform: scale(0.7);
+        }
+    }
+
+    &:hover {
+        img {
+            filter: brightness(0.9);
+        }
+
+        &:before {
+            left: 100px;
+            top: 20px;
+        }
+    }
+
+    &:before {
+        transition: all 1s;
+        content: "";
+        background-color: $color-primary;
+        width: 416px;
+        height: 550px;
+        display: block;
+        position: absolute;
+        left: 80px;
+        top: 30px;
+        clip-path: url("#svgImage");
+
+        @include breakpoint(mobile) {
+            transform: scale(0.7);
+            left: 20px;
+            top: 30px;
+        }
+    }
+}
