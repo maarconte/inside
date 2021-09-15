@@ -2444,6 +2444,93 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_6140b9ff70ecc": {
+                    "key": "layout_6140b9ff70ecc",
+                    "name": "bandeau",
+                    "label": "Bandeau",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6140ba0d70ecd",
+                            "label": "Titre",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_6140ba1970ece",
+                            "label": "Texte",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_6140ba3170ecf",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_6140ba3d70ed0",
+                            "label": "Lien",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Ajouter une section",
@@ -2477,5 +2564,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1630930543
+    "modified": 1631631956
 }
