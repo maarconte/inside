@@ -30,12 +30,10 @@
 			<p><?php the_sub_field('text'); ?></p>
 
 					<?php if ( $video_value  === "true" ) : ?>
-						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-							Launch demo modal
-						</button>
+
 						<!-- Modal -->
-						<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-							<div class="modal-dialog">
+						<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" >
+							<div class="modal-dialog modal-dialog-centered modal-lg">
 								<div class="modal-content">
 									<div class="modal-header">
 										<h5 class="modal-title"><?php the_sub_field('title'); ?></h5>
