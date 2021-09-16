@@ -47,9 +47,10 @@ html body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 150vh;
     margin: 0;
     background-color: $html__bgcolor !important;
+
+    //overflow-y: auto;
 }
 
 main {

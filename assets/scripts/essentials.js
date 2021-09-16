@@ -68,6 +68,6 @@ $('.slider_3').slick({
 $(function () {
   $(document).scroll(function () {
     var $nav = $(".navbar-light");
-    $nav.toggleClass('bg-white',$(this).scrollTop() > $nav.height());
+    $nav.toggleClass('bg-opacity',$(this).scrollTop() > $nav.height());
   });
 });

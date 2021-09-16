@@ -51,7 +51,7 @@
                 }
 
                 &:before {
-                    left: 100px;
+                    left: 9%;
                     top: 20px;
                 }
             }
@@ -64,7 +64,7 @@
                 height: 550px;
                 display: block;
                 position: absolute;
-                left: 80px;
+                left: 7%;
                 top: 30px;
                 clip-path: url("#svgImage");
 
@@ -74,6 +74,11 @@
                     top: 30px;
                 }
             }
+        }
+
+        &__caption {
+            font-weight: 600;
+            text-align: center;
         }
     }
 }

@@ -48,6 +48,9 @@
             'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
         ) );
         ?>
+        <button class="btn btn-custom yellow ms-auto">
+          S'inscrire
+        </button>
     </div>
   </div>
 </nav>

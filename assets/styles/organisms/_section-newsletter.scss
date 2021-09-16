@@ -17,7 +17,7 @@
         display: flex;
         background-color: #fff;
         border-radius: 20px;
-        padding: 5px;
+        padding: 5px 5px 5px 15px;
 
         .wpcf7-form-control-wrap {
             width: 100%;
@@ -33,6 +33,12 @@
             text-transform: uppercase;
             font-weight: bold;
             width: 150px;
+            background-color: $color-secondary;
+            color: #fff;
+
+            &:hover {
+                filter: brightness(110%);
+            }
         }
 
         .ajax-loader {

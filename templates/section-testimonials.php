@@ -59,7 +59,7 @@
 
                   <?php $link = get_sub_field( 'link' ); ?>
 			<?php if ( $link ) : ?>
-				<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>" class="btn btn-custom"><?php echo esc_html( $link['title'] ); ?></a>
+				<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>" class="btn btn-custom blue"><?php echo esc_html( $link['title'] ); ?></a>
 			<?php endif; ?>
         </div>
  </section>

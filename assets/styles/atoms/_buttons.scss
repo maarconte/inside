@@ -49,18 +49,32 @@ button, .btn {
 }
 
 .btn.btn-custom {
-    color: #fff;
     text-transform: uppercase;
     font-weight: 600;
-    background-image: url("./assets/images/btn-custom.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 89px;
-    width: 200px;
     padding: 20px;
+    transition-duration: .8s;
 
-    &:hover {
-        filter: brightness(150%);
+    &.yellow {
+        color: $color-secondary-darker;
+        background-image: url("./assets/images/btn-custom-y.svg");
+        padding: 20px 30px;
+
+        &:hover {
+            filter: brightness(110%);
+        }
+    }
+
+    &.blue {
+        color: #fff;
+        background-image: url("./assets/images/btn-custom.svg");
+        height: 89px;
+        width: 200px;
+
+        &:hover {
+            filter: brightness(150%);
+        }
     }
 }

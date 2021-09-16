@@ -14,8 +14,14 @@ nav.navbar {
     left: 0;
     z-index: 200;
     width: 100vw;
-    height: $header_height;
+
+    //height: $header_height;
     transition: all 1s;
+
+    .nav-link {
+        font-weight: 600;
+        color: $color-secondary-darker;
+    }
 
     .logo  {
         width: 12rem;
@@ -41,6 +47,28 @@ nav.navbar {
     }
 }
 
-.navbar.bg-white .logo {
-    opacity: 1;
+.page:not(.home) {
+    .navbar {
+        background-color: rgba(#fff, 0.7);
+
+        .logo {
+            opacity: 1;
+        }
+    }
+}
+
+.home nav.navbar a.nav-link {
+    color: #fff;
+}
+
+.navbar.bg-opacity {
+    background-color: rgba(#fff, 0.7);
+
+    a.nav-link {
+        color: $color-black !important;
+    }
+
+    .logo {
+        opacity: 1;
+    }
 }

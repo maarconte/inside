@@ -1,4 +1,9 @@
 .section-products {
+    iframe {
+        margin: 0 auto;
+        display: block;
+    }
+
     .img-wrapper {
         img, &:before {
             width: 200px;
@@ -6,6 +11,8 @@
         }
 
         &.video {
+            cursor: pointer;
+
             &:after {
                 display: inline-block;
                 font-style: normal;

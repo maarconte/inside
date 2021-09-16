@@ -9,7 +9,7 @@
 
 		<div class="row">
 <?php if ( have_rows('product_list') ) : ?>
-
+<?php $i = 0 ;?>
 	<?php while( have_rows('product_list') ) : the_row(); ?>
 		<?php $video_checked_values = get_sub_field( 'video' ); ?>
 		<?php $video_value = $video_checked_values[0]; ?>
@@ -47,7 +47,7 @@
 						</div>
 					<?php endif; ?>
 		</div>
-
+<?php $i++ ;?>
 	<?php endwhile; ?>
 
 <?php endif; ?>
