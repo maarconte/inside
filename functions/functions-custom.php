@@ -54,4 +54,27 @@ add_action( 'customize_register', 'inside_customize_register' );
 
 
 
+add_action('customize_register','mytheme_customizer_options');
+/*
+ * Add in our custom Accent Color setting and control to be used in the Customizer in the Colors section
+ *
+ */
+function mytheme_customizer_options( $wp_customize ) {
+ $wp_customize->add_section('inside_calendly', array(
+        'title'    => __('Calendly', 'inside'),
+        'description' => '',
+        'priority' => 120,
+    ));
+$wp_customize->add_setting('inside_calendly', array(
+        'default'        => '',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
 
+    ));
+   $wp_customize->add_control('inside_calendly', array(
+        'label'      => __('Calendly', 'inside'),
+        'section'    => 'inside_calendly',
+        'settings'   => 'inside_calendly',
+    ));
+
+}

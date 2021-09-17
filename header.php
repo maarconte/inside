@@ -48,7 +48,7 @@
             'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
         ) );
         ?>
-        <a href="https://calendly.com/hl_inside/pui_inside" target="_blank" class="btn btn-custom yellow ms-auto">
+        <a href="<?php echo get_option('inside_calendly','#') ?>" target="_blank" class="btn btn-custom yellow ms-auto">
           S'inscrire
         </a>
     </div>
