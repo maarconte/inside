@@ -6,23 +6,23 @@
  */
 ?>
 <!DOCTYPE html>
-<html <? language_attributes(); ?>>
+<html <?php language_attributes(); ?>>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-    <? inside_gtm('head') ?>
+    <?php inside_gtm('head') ?>
     <!--=== OPEN-GRAPH TAGS ===-->
-    <? inside_ogtags() ?>
+    <?php inside_ogtags() ?>
     <!--=== WP HEAD ===-->
-    <? wp_head(); ?>
+    <?php wp_head(); ?>
   </head>
 
   <body <?php body_class(); ?>>
-    <? inside_gtm('body') ?>
+    <?php inside_gtm('body') ?>
 
-     <? $custom_logo_id = get_theme_mod('custom_logo','');
+     <?php $custom_logo_id = get_theme_mod('custom_logo','');
         $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); ?>
 
 <nav class="navbar navbar-expand-lg navbar-light">
@@ -70,7 +70,7 @@
 <div class="site-header clip-svg"></div>
             </header>
 <?php endif; ?>
-<? if (is_archive() || is_category()): ?>
+<?php if (is_archive() || is_category()): ?>
   <header>
     <h1 class="page-title screen-reader-text">
     <?php
@@ -86,5 +86,5 @@
 					?>
     </h1>
   </header>
-<? endif; ?>
+<?php endif; ?>
     <div id="content" class="site-content">

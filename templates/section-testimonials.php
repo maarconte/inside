@@ -39,7 +39,7 @@
                                             <p class="author"><?php the_title()?></p>
                                       <!-- Auteur -->
                                 </div>
-                                <? $y++ ; endwhile;?>
+                                <?php $y++ ; endwhile;?>
                               </div>
                                       <ol class="carousel-indicators">
                                 <?php while ( $the_query->have_posts() ): $the_query->the_post(); ?>
@@ -54,7 +54,7 @@
                                 <i class="fas fa-chevron-right fa-2x" aria-hidden="true"></i>
                           </a>
                     </div>
-                <? endif; wp_reset_query(); ?>
+                <?php endif; wp_reset_query(); ?>
 
 
                   <?php $link = get_sub_field( 'link' ); ?>

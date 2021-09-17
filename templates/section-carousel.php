@@ -18,8 +18,8 @@
         <h2 class="section__title"><?php echo get_sub_field('title'); ?></h2>
     <?php endif; ?>
     <!-- Title -->
-          <? $images = get_sub_field('images'); ?>
-          <? if($images): $i =0; $y =0; ?>
+          <?php $images = get_sub_field('images'); ?>
+          <?php if($images): $i =0; $y =0; ?>
           <div class="slider_3">
               <!-- Carrousel -->
                <?php foreach( $images as $image ): ?>
@@ -28,6 +28,6 @@
               <!-- Carrousel -->
           </div>
 
-          <? endif; ?>
+          <?php endif; ?>
       </div>
  </section>

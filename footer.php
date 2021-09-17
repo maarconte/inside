@@ -9,7 +9,7 @@
     <footer class="footer">
       <div class="container">
         <div class="row footer__inner">
-       <? if(is_active_sidebar('footer-1')){
+       <?php if(is_active_sidebar('footer-1')){
       dynamic_sidebar('footer-1');
         } ?>
         </div>
@@ -37,6 +37,6 @@
     </div>
 
     </footer>
-    <? wp_footer() ?>
+    <?php wp_footer() ?>
   </body>
 </html>
