@@ -30,7 +30,7 @@
   <a class="navbar-brand" href="<?php echo site_url(); ?>">
     <div class="logo" style="background-image: url('<?php if(get_option('logo_secondary','')): echo get_option('logo_secondary',''); else: echo get_template_directory_uri()?>/assets/images/stanlee_logo_texte.png<?php endif; ?>')"></div>
   </a>
-    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
+    <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
         <span class="navbar-toggler-icon"></span>
     </button>
 

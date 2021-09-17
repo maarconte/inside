@@ -58,7 +58,6 @@ function inside_enqueue() {
   wp_enqueue_script('slick/scripts');
   wp_register_script('inside_/scripts', get_template_directory_uri() . '/script.min.js', false, array( 'jquery' ), true);
   wp_enqueue_script('inside_/scripts');
-
   // styles
   wp_enqueue_style('inside_/styles', get_template_directory_uri() . inside_get_cachebusted_css(), false, null);
   wp_enqueue_style('slick/styles', get_template_directory_uri() . '/inc/assets/slick/slick.css', false, null);
