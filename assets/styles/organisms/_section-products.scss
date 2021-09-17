@@ -1,4 +1,13 @@
 .section-products {
+    @include breakpoint(mobile) {
+        text-align: center;
+
+        p {
+            margin-bottom: 3rem;
+        }
+    }
+
+
     iframe {
         margin: 0 auto;
         display: block;
@@ -9,6 +18,10 @@
             width: 200px;
             height: 196px;
             clip-path: url(#svgImage2);
+
+            @include breakpoint(mobile) {
+                transform: scale(1.1);
+            }
         }
 
         &:hover {

@@ -1,6 +1,6 @@
 <?php $image = get_sub_field( 'image' ); ?>
 <div class="container">
-	<section class="section section-bandeau"
+	<section class="section section-bandeau w-100"
 	<?php if ( $image ) : ?> style="background-image:url(<?php echo esc_url( $image['url'] ); ?>)" <?php endif;?>
 	>
 		<div class="section-bandeau__content">
