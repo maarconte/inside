@@ -48,9 +48,9 @@
             'fallback_cb'    => 'Bootstrap_NavWalker::fallback', // For menu fallback
         ) );
         ?>
-        <button class="btn btn-custom yellow ms-auto">
+        <a href="https://help.calendly.com/hc/en-us/articles/223195568-Embed-options-for-Wordpress#which-version-of-wordpress-do-i-have--0-1" target="_blank" class="btn btn-custom yellow ms-auto">
           S'inscrire
-        </button>
+        </a>
     </div>
   </div>
 </nav>

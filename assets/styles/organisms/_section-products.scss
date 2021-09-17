@@ -7,7 +7,19 @@
     .img-wrapper {
         img, &:before {
             width: 200px;
-            height: 264px;
+            height: 196px;
+            clip-path: url(#svgImage2);
+        }
+
+        &:hover {
+            &:before {
+                left: 20%;
+            }
+        }
+
+        &:before {
+            left: 17%;
+            top: 10px;
         }
 
         &.video {
@@ -30,7 +42,7 @@
                 left: 0;
                 color: #fff;
                 text-align: center;
-                line-height: 264px;
+                line-height: 190px;
             }
         }
     }

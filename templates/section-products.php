@@ -21,8 +21,8 @@
 			</div>
 			<?php endif; ?>
 			    <svg width="0" height="0">
-	<clipPath id="svgImage" clipPathUnits="objectBoundingBox" transform="scale(0.0015, 0.0012)">
-		<path d="M517.16,731.1l-414.68,62A89.29,89.29,0,0,1,0,704.75V89.29A89.28,89.28,0,0,1,97.51.39l443.7,41a89.28,89.28,0,0,1,80.92,93.95l-29,512.46A89.29,89.29,0,0,1,517.16,731.1Z"></path>
+	<clipPath id="svgImage2" clipPathUnits="objectBoundingBox" transform="scale(0.0021, 0.0021)">
+		<path d="M308.13,444.09,81.31,453.43A78.06,78.06,0,0,1,.91,363.68l37-242.94A118.55,118.55,0,0,1,144,20.55L358.23.42C419.87-5.37,470,49.26,459,110.19L415.46,350.63A113.85,113.85,0,0,1,308.13,444.09Z"/>
 	</clipPath>
 </svg>
 
