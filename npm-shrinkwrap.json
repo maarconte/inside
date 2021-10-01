@@ -5,6 +5,7 @@
   "requires": true,
   "packages": {
     "": {
+      "name": "inside",
       "version": "1.0.0",
       "dependencies": {
         "bootstrap": "^5.1.1",
@@ -3051,9 +3052,9 @@
       "dev": true
     },
     "node_modules/gulp": {
-      "version": "4.0.2",
-      "resolved": "https://registry.npmjs.org/gulp/-/gulp-4.0.2.tgz",
-      "integrity": "sha512-dvEs27SCZt2ibF29xYgmnwwCYZxdxhQ/+LFWlbAW8y7jt68L/65402Lz3+CKy0Ov4rOs+NERmDq7YlZaDqUIfA==",
+      "version": "4.0.1",
+      "resolved": "https://registry.npmjs.org/gulp/-/gulp-4.0.1.tgz",
+      "integrity": "sha512-yDVtVunxrAdsk7rIV/b7lVSBifPN1Eqe6wTjsESGrFcL+MEVzaaeNTkpUuGTUptloSOU+8oJm/lBJbgPV+tMAw==",
       "dev": true,
       "dependencies": {
         "glob-watcher": "^5.0.3",
@@ -12064,9 +12065,9 @@
       "dev": true
     },
     "gulp": {
-      "version": "4.0.2",
-      "resolved": "https://registry.npmjs.org/gulp/-/gulp-4.0.2.tgz",
-      "integrity": "sha512-dvEs27SCZt2ibF29xYgmnwwCYZxdxhQ/+LFWlbAW8y7jt68L/65402Lz3+CKy0Ov4rOs+NERmDq7YlZaDqUIfA==",
+      "version": "4.0.1",
+      "resolved": "https://registry.npmjs.org/gulp/-/gulp-4.0.1.tgz",
+      "integrity": "sha512-yDVtVunxrAdsk7rIV/b7lVSBifPN1Eqe6wTjsESGrFcL+MEVzaaeNTkpUuGTUptloSOU+8oJm/lBJbgPV+tMAw==",
       "dev": true,
       "requires": {
         "glob-watcher": "^5.0.3",
