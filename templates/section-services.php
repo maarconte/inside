@@ -11,8 +11,8 @@
  */
  ?>
 <section class="section section-services
-<? if(get_sub_field('fond') == "Couleur"):?> bg-primary
-  <? elseif(get_sub_field('fond') == "Gris"):?> bg-light<? endif;?>">
+<?php if(get_sub_field('fond') == "Couleur"):?> bg-primary
+  <?php elseif(get_sub_field('fond') == "Gris"):?> bg-light<?php endif;?>">
 
         <div class="container">
               <!-- Title -->
@@ -27,7 +27,7 @@
                           <div class="col-sm-4 section-services__item">
                                 <!-- Icon -->
                                 <?php if (get_sub_field('icon') ) :?>
-                                    <span class="section-services__item__icon"><? the_sub_field('icon') ?></span>
+                                    <span class="section-services__item__icon"><?php the_sub_field('icon') ?></span>
                                 <?php endif; ?>
                                 <!-- Icon -->
                                 <!-- Icon title -->
@@ -41,8 +41,8 @@
                                 <?php endif; ?>
                                 <!-- Texte -->
                           </div>
-                          <? endwhile; ?>
-                    <? endif;?>
+                          <?php endwhile; ?>
+                    <?php endif;?>
                     <!-- Service -->
               </div>
         </div>

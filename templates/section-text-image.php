@@ -12,8 +12,10 @@
  ?>
 
   <section class="section section-text-image">
+
+  <div class="container">
     <div class="row">
-    <div class="col-sm-6 section-text-image__text">
+    <div class="col-sm-6 section-text-image__text animate__animated animate__slideInLeft animate__delay-2s ">
         <div class="section-text-image__text__inner">
             <!-- Title -->
             <?php if(get_sub_field('title') ) : ?>
@@ -25,10 +27,29 @@
               <?php echo get_sub_field('text'); ?>
             <?php endif; ?>
            <!-- Text -->
+<?php $link = get_sub_field( 'link' ); ?>
+			<?php if ( $link ) : ?>
+				<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>" class="btn btn-custom yellow"><?php echo esc_html( $link['title'] );  ?></a>
+			<?php endif; ?>
         </div>
     </div>
-    <div class="col-sm-6 section-text-image__image">
-        <div class="bg" style="background-image: url(<?php if(get_sub_field('image') ) : $img = get_sub_field('image'); echo $img['url']; endif;?>)"></div>
+    <div class="col-sm-6 section-text-image__image animate__animated animate__slideInRight animate__delay-2s">
+
+        <?php if ( get_sub_field('image') ) : $img = get_sub_field('image'); ?>
+        <div class="img-wrapper">
+          <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+        </div>
+        <?php endif; ?>
+        <svg width="0" height="0">
+	<clipPath id="svgImage" clipPathUnits="objectBoundingBox" transform="scale(0.0015, 0.0012)">
+		<path d="M517.16,731.1l-414.68,62A89.29,89.29,0,0,1,0,704.75V89.29A89.28,89.28,0,0,1,97.51.39l443.7,41a89.28,89.28,0,0,1,80.92,93.95l-29,512.46A89.29,89.29,0,0,1,517.16,731.1Z"></path>
+	</clipPath>
+</svg>
+<?php if ($img['caption']) :?>
+<p class="section-text-image__image__caption"><?php echo esc_html($img['caption']) ;?></p>
+<?php endif;?>
     </div>
     </div>
+
+  </div>
  </section>

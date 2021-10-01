@@ -6,6 +6,33 @@
  *
  */
 
-header {
-    margin-top: $header_height;
+.page-header {
+    width: 100%;
+    grid-template-rows: 450px;
+    display: grid;
+    place-items: center;
+    border-bottom-right-radius: 450px;
+    overflow: hidden;
+
+    @include breakpoint(mobile) {
+        padding: 0 20px;
+        grid-template-rows: 300px;
+        border-bottom-right-radius: 200px;
+    }
+
+
+    .page-title {
+        z-index: 2;
+        color: #fff;
+        text-align: center;
+    }
+
+    &_logo {
+        width: 400px;
+        z-index: 111;
+
+        @include breakpoint(mobile) {
+            width: 200px;
+        }
+    }
 }

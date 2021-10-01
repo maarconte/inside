@@ -12,8 +12,8 @@
  ?>
 
  <section class="section section-text
- <? if(get_sub_field('fond') == "Couleur"):?> bg-primary
-<? elseif(get_sub_field('fond') == "Gris"):?> bg-light<? endif;?>">
+ <?php if(get_sub_field('fond') == "Couleur"):?> bg-primary
+<?php elseif(get_sub_field('fond') == "Gris"):?> bg-light<?php endif;?>">
 
  <div class="container">
         <!-- Title -->

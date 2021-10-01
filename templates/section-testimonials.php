@@ -11,17 +11,7 @@
  */
  ?>
 
-  <section class="section section-testimonials
-  <? if(get_sub_field('fond') == "Couleur"):?> bg-primary
-  <? elseif(get_sub_field('fond') == "Gris"):?> bg-light<? endif;?>">
-    <!-- Section background: image -->
-      <? if(get_sub_field('fond') == "Image"):?>
-      <div class="section__background-image"  style="
-            <? if(get_sub_field('image')):?>
-            background-image:url(<? echo the_sub_field('image') ?>);
-            <? endif;?>"></div>
-      <? endif;?>
-    <!-- Section background: image -->
+  <section class="section section-testimonials">
         <div class="container">
               <?php
               $args = array(
@@ -29,46 +19,42 @@
               );
                $the_query = new WP_Query($args);
               if ($the_query->have_posts() ): $i = 0; $y = 0; ?>
-                    <div id="carouselTestimonials" class="section-testimonials__carousel carousel slide" data-ride="carousel">
-                        <!-- Title -->
+
+                    <!-- Title -->
                         <?php if(get_sub_field('title') ) : ?>
-                              <h2 class="section__title text-center"><?php echo get_sub_field('title'); ?></h2>
+                              <h2 class="section__title mb-5"><?php echo get_sub_field('title'); ?></h2>
                         <?php endif; ?>
                         <!-- Title -->
+                    <div id="carouselTestimonials" class="section-testimonials__carousel carousel slide" data-ride="carousel">
+
                           <div class="carousel-inner">
                                 <?php  while ( $the_query->have_posts() ): $the_query->the_post(); ?>
                                 <div class="carousel-item section-testimonials__carousel_item <?php if($y == 0) {echo 'active';} ?>">
-                                    <!-- Image -->
-                                    <?php if (get_the_post_thumbnail()) : ?>
-                                          <img src="<?php the_post_thumbnail_url('thumbnail')?>" alt="" class="section-testimonials__carousel_item-image">
-                                    <? else : ?>
-                                          <div class="section-testimonials__carousel_item-image"></div>
-                                    <? endif;?>
-                                    <!-- Image -->
                                       <!-- Job -->
                                       <?php if (get_field('quote') ) : ?>
-                                            <p> <?php echo get_field('quote'); ?></p>
+                                            <p class="quote"> <?php echo get_field('quote'); ?></p>
                                       <?php endif; ?>
                                       <!-- Job -->
                                       <!-- Auteur -->
-                                            <h5><?php the_title()?></h5>
+                                            <p class="author"><?php the_title()?></p>
                                       <!-- Auteur -->
                                 </div>
-                                <? $y++ ; endwhile;?>
+                                <?php $y++ ; endwhile;?>
                               </div>
-                                      <ol class="carousel-indicators">
-                                <?php while ( $the_query->have_posts() ): $the_query->the_post(); ?>
-                                      <li data-target="#carouselTestimonials" data-slide-to="<?php echo $i?>" class="<?php if($i == 0) {echo 'active';
-                                      } ?>"></li>
-                                <?php $i++; endwhile;?>
-                                </ol>
-                          <a class="carousel-control-prev" data-target="#carouselTestimonials" role="button" data-slide="prev">
+
+                          <a class="carousel-control-prev" data-bs-target="#carouselTestimonials" role="button" data-bs-slide="prev">
                                 <i class="fas fa-chevron-left fa-2x" aria-hidden="true"></i>
                           </a>
-                          <a class="carousel-control-next" data-target="#carouselTestimonials" role="button" data-slide="next">
+                          <a class="carousel-control-next" data-bs-target="#carouselTestimonials" role="button" data-bs-slide="next">
                                 <i class="fas fa-chevron-right fa-2x" aria-hidden="true"></i>
                           </a>
                     </div>
-                <? endif; wp_reset_query(); ?>
+                <?php endif; wp_reset_query(); ?>
+
+
+                  <?php $link = get_sub_field( 'link' ); ?>
+			<?php if ( $link ) : ?>
+				<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>" class="btn btn-custom blue"><?php echo esc_html( $link['title'] ); ?></a>
+			<?php endif; ?>
         </div>
  </section>

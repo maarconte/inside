@@ -49,3 +49,25 @@ function debounce(func, wait, immediate) {
     if (callNow) func.apply(context, args);
   };
 }
+
+$('.slider_3').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [{
+    breakpoint:480,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll:1
+    }
+  }]
+});
+
+
+// Menu background color
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".navbar-light");
+    $nav.toggleClass('bg-opacity',$(this).scrollTop() > $nav.height());
+  });
+});

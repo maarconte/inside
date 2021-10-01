@@ -7,6 +7,8 @@
  */
 
 button, .btn {
+    border-radius: 20px;
+
     &:hover, &:active, &:focus {
         //
    
@@ -43,5 +45,36 @@ button, .btn {
     &:hover, &:active, &:focus {
         //
    
+    }
+}
+
+.btn.btn-custom {
+    text-transform: uppercase;
+    font-weight: 600;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 20px;
+    transition-duration: .8s;
+
+    &.yellow {
+        color: $color-secondary-darker;
+        background-image: url("./assets/images/btn-custom-y.svg");
+        padding: 20px 30px;
+
+        &:hover {
+            filter: brightness(110%);
+        }
+    }
+
+    &.blue {
+        color: #fff;
+        background-image: url("./assets/images/btn-custom.svg");
+        height: 89px;
+        width: 200px;
+
+        &:hover {
+            filter: brightness(150%);
+        }
     }
 }

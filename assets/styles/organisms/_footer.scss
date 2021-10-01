@@ -9,52 +9,78 @@
 .footer {
     width: 100vw;
     margin-top: auto;
-    color: $color-grey;
-    background: $color-dark;
-
-    &__rs {
-        text-align: center;
-
-        &__item {
-            display: inline-block;
-            list-style: none;
-            margin-right: .5rem;
-
-            a {
-                color: $color-grey1;
-                font-size: 1.5rem;
-            }
-        }
-    }
+    background: #E6E6E6;
 
     &__inner {
         padding: 1.5rem 0;
         font-size: 0.8rem;
-    }
 
-    &__credits {
-        background-color: $color-black;
-        color: $color-grey2;
-        text-align: center;
+        .widget_media_gallery {
+            flex: inherit;
+        }
 
-        a {
-            color: $color-grey2;
+        .blocks-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+
+            @include breakpoint(mobile) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+
+            .blocks-gallery-item {
+                width: inherit;
+
+                img {
+                    height: inherit;
+                    width: 100%;
+                    object-fit: contain;
+                    max-height: 70px;
+                }
+            }
         }
     }
 
-    /*----------  Widgets  ----------*/
+    &__credits {
+        background-color: $color-grey;
+        text-align: center;
 
-    .widget-title {
-        color: $color-grey1;
-        margin-bottom: 1rem;
-    }
+        .footer__inner {
+            font-weight: 600;
 
-    .nav {
-        padding: 0;
+            img {
+                display: block;
+                margin: 0 auto 30px;
+                width: 170px;
+            }
 
-        .nav-link {
-            color: $color-light;
-            padding: 0 0 0.5rem 0;
+            .footer-menu {
+                padding: 0;
+                margin: 0;
+                display: flex;
+
+                li {
+                    list-style: none;
+                    position: relative;
+                    padding: 0;
+
+                    &:first-child:after {
+                        content: "|";
+                        position: absolute;
+                        right: 0;
+                        top: 7px;
+                    }
+
+                    a {
+                        color: $color-black;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
         }
     }
 }

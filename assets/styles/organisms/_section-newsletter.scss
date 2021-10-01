@@ -1,0 +1,48 @@
+.section-newsletter {
+    .card {
+        background-color: $color-primary;
+        border-radius: 30px;
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto;
+        border: none;
+        padding: 30px;
+
+        p {
+            font-weight: 600;
+        }
+    }
+
+    &_input-wrapper {
+        display: flex;
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 5px 5px 5px 15px;
+
+        .wpcf7-form-control-wrap {
+            width: 100%;
+        }
+
+        input {
+            height: 50px;
+        }
+
+        input[type="submit"] {
+            margin-left: auto;
+            border-radius: 18px;
+            text-transform: uppercase;
+            font-weight: bold;
+            width: 150px;
+            background-color: $color-secondary;
+            color: #fff;
+
+            &:hover {
+                filter: brightness(110%);
+            }
+        }
+
+        .ajax-loader {
+            position: absolute;
+        }
+    }
+}

@@ -47,16 +47,22 @@ function inside_enqueue() {
 	// wp_enqueue_style( 'wp-bootstrap-starter-bootstrap-css', get_template_directory_uri() . '/inc/assets/css/bootstrap.min.css' );
   // fontawesome cdn
   wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.1.0/css/all.css' );
-  // jQuery (from wp core)
+
+    // jQuery (from wp core)
   wp_deregister_script( 'jquery' );
   wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, '3.3.1');
   wp_enqueue_script( 'jquery' );
+
   // scripts
+    wp_register_script('slick/scripts', get_template_directory_uri() . '/inc/assets/slick/slick.min.js', false, array( 'jquery' ), true);
+  wp_enqueue_script('slick/scripts');
   wp_register_script('inside_/scripts', get_template_directory_uri() . '/script.min.js', false, array( 'jquery' ), true);
   wp_enqueue_script('inside_/scripts');
   // styles
   wp_enqueue_style('inside_/styles', get_template_directory_uri() . inside_get_cachebusted_css(), false, null);
-  /*     wp_enqueue_style( 'custom-admin', get_stylesheet_directory_uri() . '/admin_style.min.css' ); */
+  wp_enqueue_style('slick/styles', get_template_directory_uri() . '/inc/assets/slick/slick.css', false, null);
+  wp_enqueue_style('slick-theme/styles', get_template_directory_uri() . '/inc/assets/slick/slick-theme.css', false, null);
+    wp_enqueue_style( 'custom-admin', get_stylesheet_directory_uri() . '/admin_style.min.css' );
   // Typekit
   global $typekit_id;
   if ($typekit_id) :
@@ -67,10 +73,7 @@ function inside_enqueue() {
     wp_script_add_data( 'html5hiv', 'conditional', 'lt IE 9' );
 
   	// load bootstrap js
-    wp_enqueue_script('wp-bootstrap-starter-popper', get_template_directory_uri() . '/inc/assets/js/popper.min.js', array(), '', true );
-	  wp_enqueue_script('wp-bootstrap-starter-bootstrapjs', get_template_directory_uri() . '/inc/assets/js/bootstrap.min.js', array(), '', true );
-    wp_enqueue_script('wp-bootstrap-starter-themejs', get_template_directory_uri() . '/inc/assets/js/theme-script.min.js', array(), '', true );
-	  wp_enqueue_script( 'wp-bootstrap-starter-skip-link-focus-fix', get_template_directory_uri() . '/inc/assets/js/skip-link-focus-fix.min.js', array(), '20151215', true );
+	  wp_enqueue_script('wp-bootstrap-starter-bootstrapjs', get_template_directory_uri() . '/inc/assets/js/bootstrap.bundle.min.js', array(), '', true );
 }
 
 add_action('wp_enqueue_scripts', 'inside_enqueue');
@@ -79,17 +82,18 @@ add_action('wp_enqueue_scripts', 'inside_enqueue');
 function my_custom_admin_stylesheet() {
     wp_enqueue_style( 'custom-admin', get_stylesheet_directory_uri() . '/admin_style.min.css' );
 }
-
+// TODO : Separate Admin and Login css in gulp
 //This loads the function above on the login page
 add_action( 'admin_enqueue_scripts', 'my_custom_admin_stylesheet' );
+add_action( 'login_enqueue_scripts', 'my_custom_admin_stylesheet' );
 
 // Login Style
-function my_custom_login_stylesheet() {
+/* function my_custom_login_stylesheet() {
     wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/login_style.min.css' );
-}
+} */
 
 //This loads the function above on the login page
-add_action( 'login_enqueue_scripts', 'my_custom_login_stylesheet' );
+/*add_action( 'login_enqueue_scripts', 'my_custom_login_stylesheet' ); */
 
 /* 1.2 THEME SUPPORT
 /––––––––––––––––––––––––*/

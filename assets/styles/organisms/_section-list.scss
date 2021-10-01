@@ -1,0 +1,16 @@
+.section-list {
+    .section-title {
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+
+    &_title {
+        font-size: 18px;
+    }
+
+    img {
+        width: 100px;
+        margin: 0 auto 3rem;
+        display: block;
+    }
+}
