@@ -13,7 +13,7 @@
 	<?php while( have_rows('product_list') ) : the_row(); ?>
 		<?php $video_checked_values = get_sub_field( 'video' ); ?>
 		<?php $video_value = $video_checked_values[0]; ?>
-		<div class="col-sm-4">
+		<div class="col-sm-3">
 			<?php if ( get_sub_field('image') ) : $image = get_sub_field('image'); ?>
 
 			<div class="img-wrapper mb-4 <?php echo $video_value  === "true" ? "video" : ""; ?>" <?php echo $video_value === "true" ? 'data-bs-toggle="modal" data-bs-target="#exampleModal"' : null ?>>
