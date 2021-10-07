@@ -16,7 +16,8 @@
 		<div class="col-sm-3">
 			<?php if ( get_sub_field('image') ) : $image = get_sub_field('image'); ?>
 
-			<div class="img-wrapper mb-4 <?php echo $video_value  === "true" ? "video" : ""; ?>" <?php echo $video_value === "true" ? 'data-bs-toggle="modal" data-bs-target="#exampleModal"' : null ?>>
+			<div class="img-wrapper mb-4 <?php echo $video_value  === "true" ? "video" : ""; ?>"
+			<?php echo $video_value === "true" ? 'data-bs-toggle="modal" data-bs-target="#exampleModal-'.$i.'"' : null ?>>
 				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
 			</div>
 			<?php endif; ?>
@@ -32,7 +33,7 @@
 					<?php if ( $video_value  === "true" ) : ?>
 
 						<!-- Modal -->
-						<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" >
+						<div class="modal fade" id="exampleModal-<?php echo $i?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" >
 							<div class="modal-dialog modal-dialog-centered modal-lg">
 								<div class="modal-content">
 									<div class="modal-header">
